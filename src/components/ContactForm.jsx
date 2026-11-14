@@ -1,6 +1,6 @@
 import { useId, useState } from 'react';
-import { site, whatsappLink } from '../data/site';
-import { ArrowRight, CheckIcon, WhatsAppIcon } from './ui/icons';
+import { site, whatsappLink, telegramLink } from '../data/site';
+import { ArrowRight, CheckIcon, WhatsAppIcon, TelegramIcon } from './ui/icons';
 
 /**
  * Contact / enquiry form.
@@ -145,7 +145,7 @@ export default function ContactForm() {
           not open, tap the button below or call us directly.
         </p>
 
-        <div className="mt-7 flex flex-col justify-center gap-2.5 sm:flex-row">
+        <div className="mt-7 flex flex-wrap justify-center gap-2.5">
           <a
             href={whatsappLink(buildMessage(values))}
             target="_blank"

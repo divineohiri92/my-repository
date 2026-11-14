@@ -1,7 +1,7 @@
 import PageHero from '../components/layout/PageHero';
 import Reveal from '../components/ui/Reveal';
 import ContactForm from '../components/ContactForm';
-import { site, whatsappLink } from '../data/site';
+import { site, whatsappLink, telegramLink, telegramLabel } from '../data/site';
 import { usePageMeta, businessSchema, breadcrumbSchema } from '../lib/seo';
 import {
   WhatsAppIcon,
@@ -10,6 +10,7 @@ import {
   PinIcon,
   ClockIcon,
   socialIcons,
+  TelegramIcon,
   ArrowUpRight,
 } from '../components/ui/icons';
 
@@ -49,7 +50,7 @@ export default function Contact() {
             <span className="text-palm-400 font-serif font-normal italic"> rest</span>
           </>
         }
-        lead="WhatsApp is the fastest way to reach us — it is usually answered within a few hours. Or call if you would rather talk it through."
+        lead="WhatsApp is usually answered within a few hours. If it goes quiet, message us on Telegram or call — one of them will get through."
       >
         <div className="flex flex-col gap-3 sm:flex-row">
           <a
@@ -115,6 +116,28 @@ export default function Contact() {
                         </span>
                         <span className="font-display block truncate text-[0.9375rem] font-semibold">
                           {site.phone.intl}
+                        </span>
+                      </span>
+                      <ArrowUpRight className="text-cream-200/40 size-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href={telegramLink()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group hover:bg-cream-50/5 flex items-center gap-3.5 rounded-xl py-3 transition-colors"
+                    >
+                      <span className="grid size-10 shrink-0 place-items-center rounded-full bg-[#2AABEE]/15 text-[#2AABEE]">
+                        <TelegramIcon className="size-4.5" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="text-cream-200/45 block text-[0.625rem] font-semibold tracking-[0.16em] uppercase">
+                          Telegram
+                        </span>
+                        <span className="font-display block truncate text-[0.9375rem] font-semibold">
+                          {telegramLabel()}
                         </span>
                       </span>
                       <ArrowUpRight className="text-cream-200/40 size-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

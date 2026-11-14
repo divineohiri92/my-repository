@@ -274,6 +274,10 @@ export const testimonials = [
 
 export const faqs = [
   {
+    q: 'What is the best way to reach you?',
+    a: 'WhatsApp is usually fastest, but it is not always answered straight away. If it goes quiet, message us on Telegram or call 0903 544 8624 — one of the three will always get through.',
+  },
+  {
     q: 'How much notice do you need?',
     a: 'Small chops and regular menu orders need 24–48 hours. For events with 50+ guests, book at least two weeks ahead so we can plan the menu and tasting properly.',
   },

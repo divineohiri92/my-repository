@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Logo from '../ui/Logo';
-import { site, whatsappLink } from '../../data/site';
-import { PhoneIcon, MailIcon, PinIcon, socialIcons, WhatsAppIcon, ArrowUpRight } from '../ui/icons';
+import { site, whatsappLink, telegramLink } from '../../data/site';
+import { PhoneIcon, MailIcon, PinIcon, socialIcons, WhatsAppIcon, TelegramIcon } from '../ui/icons';
 
 const quickLinks = [
   { to: '/', label: 'Home' },
@@ -114,6 +114,22 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href={telegramLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream-200/70 hover:text-cream-50 flex items-start gap-3 transition-colors"
+                >
+                  <TelegramIcon className="text-palm-400 mt-0.5 size-4 shrink-0" />
+                  <span>
+                    Telegram
+                    <span className="text-cream-200/40 block text-xs">
+                      WhatsApp not working? Try here
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
                   href={`mailto:${site.email}`}
                   className="text-cream-200/70 hover:text-cream-50 flex items-start gap-3 transition-colors"
                 >
@@ -130,16 +146,26 @@ export default function Footer() {
               </li>
             </ul>
 
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-cream-50/10 text-cream-50 ring-cream-50/15 mt-6 inline-flex h-11 w-full items-center justify-center gap-2 rounded-full text-[0.8125rem] font-semibold ring-1 transition-colors hover:bg-[#25D366] hover:text-[#062b14] hover:ring-transparent"
-            >
-              <WhatsAppIcon className="size-4" />
-              Chat with us
-              <ArrowUpRight className="size-3.5" />
-            </a>
+            <div className="mt-6 grid grid-cols-2 gap-2">
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-cream-50/10 text-cream-50 ring-cream-50/15 inline-flex h-11 items-center justify-center gap-2 rounded-full text-[0.75rem] font-semibold ring-1 transition-colors hover:bg-[#25D366] hover:text-[#062b14] hover:ring-transparent"
+              >
+                <WhatsAppIcon className="size-4" />
+                WhatsApp
+              </a>
+              <a
+                href={telegramLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-cream-50/10 text-cream-50 ring-cream-50/15 inline-flex h-11 items-center justify-center gap-2 rounded-full text-[0.75rem] font-semibold ring-1 transition-colors hover:bg-[#2AABEE] hover:text-[#04212f] hover:ring-transparent"
+              >
+                <TelegramIcon className="size-4" />
+                Telegram
+              </a>
+            </div>
           </div>
         </div>
 

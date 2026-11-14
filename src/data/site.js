@@ -38,6 +38,20 @@ export const site = {
     whatsapp: WA_NUMBER,
   },
 
+  /**
+   * Telegram is the backup channel — WhatsApp is not always reachable.
+   * TODO(client): replace with Cheryl's real Telegram username (no @).
+   * If it stays empty, every Telegram button falls back to a t.me link that
+   * still opens a chat with the business phone number.
+   */
+  telegram: {
+    username: '', // e.g. 'cherrylskitchen'
+    // t.me works with either a username or a phone number. A phone-based link
+    // always resolves, so it is the safe default until the handle is confirmed.
+    href: 'https://t.me/+2349035448624',
+    handle: '', // display label once confirmed
+  },
+
   email: 'hello@cherrylskitchen.ng', // TODO(client): confirm the email inbox
 
   hours: [
@@ -52,13 +66,14 @@ export const site = {
     "Hi Cheryl's Kitchen! I'd like to place an order. Could you share your menu and availability please?",
 
   socials: [
-    // TODO(client): swap these handles for the real business accounts.
+    // TikTok handle confirmed by the client.
+    { name: 'TikTok', handle: '@cheyersef', href: 'https://www.tiktok.com/@cheyersef' },
+    // TODO(client): confirm these handles.
     {
       name: 'Instagram',
       handle: '@cherrylskitchen',
       href: 'https://instagram.com/cherrylskitchen',
     },
-    { name: 'TikTok', handle: '@cherrylskitchen', href: 'https://tiktok.com/@cherrylskitchen' },
     { name: 'Facebook', handle: "Cheryl's Kitchen", href: 'https://facebook.com/cherrylskitchen' },
   ],
 };
@@ -72,6 +87,28 @@ export function resolvePhoto(name) {
 export function whatsappLink(message = site.whatsappMessage) {
   return `https://wa.me/${site.phone.whatsapp}?text=${encodeURIComponent(message)}`;
 }
+
+/**
+ * Telegram link. Uses the username when one is configured, otherwise the
+ * phone-number form which resolves without a handle.
+ */
+export function telegramLink() {
+  const u = site.telegram.username?.replace(/^@/, '');
+  return u ? `https://t.me/${u}` : site.telegram.href;
+}
+
+/** Label shown next to the Telegram button. */
+export function telegramLabel() {
+  const u = site.telegram.username?.replace(/^@/, '');
+  return u ? `@${u}` : site.phone.intl;
+}
+
+/** All the ways someone can start a conversation, in priority order. */
+export const contactChannels = [
+  { name: 'WhatsApp', icon: 'whatsapp', href: whatsappLink(), tone: '#25D366' },
+  { name: 'Telegram', icon: 'telegram', href: telegramLink(), tone: '#2AABEE' },
+  { name: 'Call', icon: 'phone', href: site.phone.tel, tone: '#ef8b3c' },
+];
 
 /** Hero + section imagery, all served from the optimised asset folder. */
 export const photos = {

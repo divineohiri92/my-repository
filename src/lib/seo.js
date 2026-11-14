@@ -99,7 +99,17 @@ export const businessSchema = {
   address: postalAddress,
   geo: { '@type': 'GeoCoordinates', latitude: 6.5244, longitude: 3.3792 },
   areaServed: site.areaServed.map((a) => ({ '@type': 'City', name: a })),
+  // Public profiles + chat channels help Google verify the business identity.
   sameAs: site.socials.map((s) => s.href),
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      telephone: `+${site.phone.whatsapp}`,
+      email: site.email,
+      availableLanguage: ['English'],
+    },
+  ],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',

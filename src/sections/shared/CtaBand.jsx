@@ -1,7 +1,7 @@
 import Picture from '../../components/ui/Picture';
 import Reveal from '../../components/ui/Reveal';
-import { site, whatsappLink, photos } from '../../data/site';
-import { WhatsAppIcon, PhoneIcon, ArrowRight } from '../../components/ui/icons';
+import { site, whatsappLink, telegramLink, photos } from '../../data/site';
+import { WhatsAppIcon, PhoneIcon, TelegramIcon, ArrowRight } from '../../components/ui/icons';
 
 /** Full-bleed closing CTA used at the bottom of most pages. */
 export default function CtaBand({
@@ -48,7 +48,7 @@ export default function CtaBand({
 
           <Reveal
             delay={180}
-            className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+            className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap"
           >
             <a
               href={whatsappLink()}
@@ -59,6 +59,15 @@ export default function CtaBand({
               <WhatsAppIcon className="size-4.5" />
               Chat on WhatsApp
               <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+            <a
+              href={telegramLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-13 w-full items-center justify-center gap-2.5 rounded-full bg-[#2AABEE] px-6 text-[0.875rem] font-semibold text-[#04212f] transition-transform duration-300 hover:scale-[1.02] sm:w-auto"
+            >
+              <TelegramIcon className="size-4.5" />
+              Telegram
             </a>
             <a
               href={site.phone.tel}
@@ -72,7 +81,14 @@ export default function CtaBand({
           <Reveal
             as="p"
             delay={240}
-            className="text-cream-200/40 mt-6 text-[0.6875rem] tracking-[0.16em] uppercase"
+            className="text-cream-200/45 mt-6 text-[0.75rem] leading-relaxed"
+          >
+            WhatsApp not going through? Telegram and calls always work.
+          </Reveal>
+          <Reveal
+            as="p"
+            delay={280}
+            className="text-cream-200/35 mt-2 text-[0.6875rem] tracking-[0.16em] uppercase"
           >
             {site.hoursNote}
           </Reveal>

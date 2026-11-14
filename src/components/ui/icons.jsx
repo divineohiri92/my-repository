@@ -37,6 +37,12 @@ export const TikTokIcon = (p) => (
   </svg>
 );
 
+export const TelegramIcon = (p) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" {...p}>
+    <path d="M21.7 3.7 2.9 10.9c-.9.35-.88 1.62.03 1.94l4.3 1.52 1.63 5.2c.25.8 1.28.98 1.79.32l2.36-3.04 4.16 3.06c.62.46 1.5.13 1.69-.62l3.1-12.6c.2-.82-.6-1.53-1.4-1.26h-.01ZM9.5 14.2l7.4-4.6-6.1 5.5-.35 3.2-1.3-4.1h.35Z" />
+  </svg>
+);
+
 export const FacebookIcon = (p) => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" {...p}>
     <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6A21 21 0 0 0 14.3 3.5c-2.4 0-4 1.45-4 4.12V9.9H7.6V13h2.7v8h3.2Z" />
@@ -117,4 +123,5 @@ export const socialIcons = {
   Instagram: InstagramIcon,
   TikTok: TikTokIcon,
   Facebook: FacebookIcon,
+  Telegram: TelegramIcon,
 };

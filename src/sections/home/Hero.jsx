@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
 import Picture from '../../components/ui/Picture';
-import { site, whatsappLink, photos } from '../../data/site';
-import { ArrowRight, StarIcon, WhatsAppIcon, SparkleIcon } from '../../components/ui/icons';
+import { site, whatsappLink, telegramLink, photos } from '../../data/site';
+import {
+  ArrowRight,
+  StarIcon,
+  WhatsAppIcon,
+  TelegramIcon,
+  SparkleIcon,
+} from '../../components/ui/icons';
 
 export default function Hero() {
   return (

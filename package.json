@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Cheryl's Kitchen \u2014 Lagos catering & small chops. Modern website built with React, Vite and Tailwind CSS.",
+  "description": "Cheryl's Kitchen — Lagos catering & small chops. Modern website built with React, Vite and Tailwind CSS.",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
@@ -23,8 +23,8 @@
     "@vitejs/plugin-react": "^5.2.0",
     "prettier": "^3.10.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.5",
-    "vite": "^7.3.8",
-    "sharp": "^0.35.5"
+    "vite": "^7.3.8"
   }
 }

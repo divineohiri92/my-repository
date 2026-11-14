@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from '../ui/Logo';
-import { PhoneIcon, WhatsAppIcon, CloseIcon } from '../ui/icons';
-import { site, whatsappLink } from '../../data/site';
+import { PhoneIcon, WhatsAppIcon, TelegramIcon, CloseIcon } from '../ui/icons';
+import { site, whatsappLink, telegramLink } from '../../data/site';
 
 const nav = [
   { to: '/', label: 'Home' },
@@ -147,9 +147,24 @@ export default function Header() {
             {/* Desktop actions */}
             <div className="hidden items-center gap-2 lg:flex">
               <a
+                href={telegramLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Message ${site.name} on Telegram`}
+                title="Message us on Telegram"
+                className={[
+                  'grid size-9 place-items-center rounded-full transition-colors',
+                  light
+                    ? 'text-cream-100 hover:bg-cream-50/10'
+                    : 'text-forest-900/70 hover:bg-forest-900/6 hover:text-forest-950',
+                ].join(' ')}
+              >
+                <TelegramIcon className="size-4" />
+              </a>
+              <a
                 href={site.phone.tel}
                 className={[
-                  'inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-[0.8125rem] font-semibold transition-colors',
+                  'inline-flex items-center gap-2 rounded-full px-3 py-2 text-[0.8125rem] font-semibold transition-colors',
                   light
                     ? 'text-cream-100 hover:bg-cream-50/10'
                     : 'text-forest-950 hover:bg-forest-900/6',
@@ -287,6 +302,15 @@ export default function Header() {
               >
                 <WhatsAppIcon className="size-4.5" />
                 Order on WhatsApp
+              </a>
+              <a
+                href={telegramLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-2 inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-[#2AABEE] text-sm font-semibold text-[#04212f]"
+              >
+                <TelegramIcon className="size-4.5" />
+                Message on Telegram
               </a>
               <a
                 href={site.phone.tel}
