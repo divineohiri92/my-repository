@@ -1,0 +1,98 @@
+{
+  "asun": {
+    "width": 1024,
+    "height": 1024,
+    "widths": [
+      400,
+      640,
+      900,
+      1024
+    ]
+  },
+  "catering-spread": {
+    "width": 1376,
+    "height": 768,
+    "widths": [
+      400,
+      640,
+      900,
+      1200
+    ]
+  },
+  "egusi-swallow": {
+    "width": 1024,
+    "height": 1024,
+    "widths": [
+      400,
+      640,
+      900,
+      1024
+    ]
+  },
+  "hero-jollof": {
+    "width": 896,
+    "height": 1200,
+    "widths": [
+      400,
+      640,
+      896
+    ]
+  },
+  "kitchen": {
+    "width": 1024,
+    "height": 1024,
+    "widths": [
+      400,
+      640,
+      900,
+      1024
+    ]
+  },
+  "peppered-chicken": {
+    "width": 1024,
+    "height": 1024,
+    "widths": [
+      400,
+      640,
+      900,
+      1024
+    ]
+  },
+  "puff-puff": {
+    "width": 896,
+    "height": 1200,
+    "widths": [
+      400,
+      640,
+      896
+    ]
+  },
+  "small-chops": {
+    "width": 1024,
+    "height": 1024,
+    "widths": [
+      400,
+      640,
+      900,
+      1024
+    ]
+  },
+  "suya-grill": {
+    "width": 896,
+    "height": 1200,
+    "widths": [
+      400,
+      640,
+      896
+    ]
+  },
+  "zobo": {
+    "width": 896,
+    "height": 1200,
+    "widths": [
+      400,
+      640,
+      896
+    ]
+  }
+}

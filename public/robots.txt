@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Block nothing — the whole site is public marketing content.
+Sitemap: https://cherrylskitchen.ng/sitemap.xml
