@@ -40,16 +40,13 @@ export const site = {
 
   /**
    * Telegram is the backup channel — WhatsApp is not always reachable.
-   * TODO(client): replace with Cheryl's real Telegram username (no @).
-   * If it stays empty, every Telegram button falls back to a t.me link that
-   * still opens a chat with the business phone number.
+   * Username confirmed by the client. Leave empty to fall back to the
+   * phone-number link (https://t.me/+2349035448624) instead.
    */
   telegram: {
-    username: '', // e.g. 'cherrylskitchen'
-    // t.me works with either a username or a phone number. A phone-based link
-    // always resolves, so it is the safe default until the handle is confirmed.
-    href: 'https://t.me/+2349035448624',
-    handle: '', // display label once confirmed
+    username: 'Chochocolateee',
+    href: 'https://t.me/+2349035448624', // used only when username is empty
+    handle: '@Chochocolateee',
   },
 
   email: 'hello@cherrylskitchen.ng', // TODO(client): confirm the email inbox

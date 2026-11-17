@@ -51,10 +51,7 @@ Search the codebase for `TODO(client)`:
 1. `site.url` — replace `https://cherrylskitchen.ng` with the live domain, then update
    `index.html`, `public/robots.txt` and `public/sitemap.xml` to match.
 2. `site.email` — confirm the real inbox.
-3. `site.telegram.username` — **empty by default.** Until you set it, every Telegram
-   button opens `https://t.me/+2349035448624` (the phone-number form, which always
-   resolves). Set `username: 'cherrylskitchen'` and the links become
-   `t.me/cherrylskitchen` automatically.
+3. `site.telegram` — confirmed as **@Chochocolateee** (`t.me/Chochocolateee`).
 4. `site.socials` — TikTok is confirmed (`@cheyersef`); confirm Instagram / Facebook.
 5. Prices in `src/data/menu.js` — confirm current pricing.
 6. Testimonials — replace with real, permission-given reviews.
@@ -68,7 +65,7 @@ Three ways to start a conversation, because WhatsApp is not always reachable:
 | Channel | Where it appears |
 | --- | --- |
 | **WhatsApp** | Header, hero, every menu item, every package, CTA bands, footer |
-| **Telegram** | Header icon, mobile menu, sticky mobile bar, contact page, footer, CTA bands |
+| **Telegram** | Header icon, mobile menu, sticky mobile bar, contact page, footer, CTA bands — `t.me/Chochocolateee` |
 | **Call** | Header, hero, mobile menu, sticky mobile bar, footer, contact page |
 
 The sticky mobile bar shows all three side by side so a visitor never hits a dead end.
@@ -79,7 +76,7 @@ Telegram links are built by `telegramLink()` in `src/data/site.js`:
 
 ```js
 telegram: {
-  username: '',                              // set this and t.me/<username> is used
+  username: 'Chochocolateee',                // t.me/Chochocolateee
   href: 'https://t.me/+2349035448624',       // fallback: phone-number link
 }
 ```
