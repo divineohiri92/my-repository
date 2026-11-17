@@ -21,13 +21,16 @@ export default function PageHero({ eyebrow, title, lead, crumb, children, align 
       <div className="shell relative">
         <nav
           aria-label="Breadcrumb"
-          className="text-cream-200/45 mb-7 flex items-center gap-2 text-[0.6875rem] font-medium tracking-[0.16em] uppercase"
+          className="text-cream-200/45 mb-5 flex items-center gap-1 text-[0.6875rem] font-medium tracking-[0.16em] uppercase"
         >
-          <Link to="/" className="hover:text-cream-50 transition-colors">
+          <Link
+            to="/"
+            className="hover:text-cream-50 -ml-2 inline-flex min-h-11 items-center rounded-full px-2 transition-colors"
+          >
             Home
           </Link>
-          <ArrowRight className="size-3" />
-          <span className="text-cream-100/80">{crumb}</span>
+          <ArrowRight className="size-3" aria-hidden="true" />
+          <span className="text-cream-100/80 inline-flex min-h-11 items-center">{crumb}</span>
         </nav>
 
         <div className={align === 'center' ? 'mx-auto max-w-3xl text-center' : 'max-w-3xl'}>

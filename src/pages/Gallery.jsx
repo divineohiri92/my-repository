@@ -145,7 +145,7 @@ export default function Gallery() {
                 }}
                 aria-pressed={filter === g}
                 className={[
-                  'shrink-0 rounded-full border px-4 py-2 text-[0.75rem] font-semibold transition-all duration-300',
+                  'inline-flex min-h-11 shrink-0 items-center rounded-full border px-4 text-[0.75rem] font-semibold transition-all duration-300',
                   filter === g
                     ? 'border-forest-900 bg-forest-900 text-cream-50'
                     : 'border-forest-900/15 text-forest-900/65 hover:border-forest-900/35 hover:text-forest-950',

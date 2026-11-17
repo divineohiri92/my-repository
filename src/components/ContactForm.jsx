@@ -313,7 +313,7 @@ export default function ContactForm() {
               onClick={() => setValues((v) => ({ ...v, budget: v.budget === b ? '' : b }))}
               aria-pressed={values.budget === b}
               className={[
-                'rounded-full border px-3.5 py-2 text-[0.75rem] font-semibold transition-all duration-200',
+                'inline-flex min-h-11 items-center rounded-full border px-4 text-[0.75rem] font-semibold transition-all duration-200',
                 values.budget === b
                   ? 'border-forest-900 bg-forest-900 text-cream-50'
                   : 'border-forest-900/15 text-forest-900/70 hover:border-forest-900/35',

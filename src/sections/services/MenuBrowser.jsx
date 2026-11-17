@@ -139,7 +139,7 @@ export default function MenuBrowser() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Order ${item.name} on WhatsApp`}
-                  className="border-forest-900/15 text-forest-900 hover:border-forest-900 hover:bg-forest-900 hover:text-cream-50 inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-[0.6875rem] font-semibold transition-colors duration-300"
+                  className="border-forest-900/15 text-forest-900 hover:border-forest-900 hover:bg-forest-900 hover:text-cream-50 inline-flex min-h-11 items-center gap-1.5 rounded-full border px-4 text-[0.6875rem] font-semibold transition-colors duration-300"
                 >
                   <WhatsAppIcon className="size-3.5" />
                   Order

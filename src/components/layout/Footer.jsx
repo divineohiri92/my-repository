@@ -51,7 +51,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${site.name} on ${s.name} (${s.handle})`}
-                    className="border-cream-50/15 text-cream-100 hover:border-palm-400/50 hover:bg-palm-500 hover:text-forest-950 grid size-10 place-items-center rounded-full border transition-all duration-300 hover:-translate-y-0.5"
+                    className="border-cream-50/15 text-cream-100 hover:border-palm-400/50 hover:bg-palm-500 hover:text-forest-950 grid size-11 place-items-center rounded-full border transition-all duration-300 hover:-translate-y-0.5"
                   >
                     <Icon className="size-4.5" />
                   </a>
@@ -68,7 +68,7 @@ export default function Footer() {
                 <li key={l.to}>
                   <Link
                     to={l.to}
-                    className="group text-cream-200/70 hover:text-cream-50 inline-flex items-center gap-1.5 text-sm transition-colors"
+                    className="group text-cream-200/70 hover:text-cream-50 inline-flex min-h-7 items-center gap-1.5 py-1 text-sm transition-colors"
                   >
                     <span className="bg-palm-400 h-px w-0 transition-all duration-300 group-hover:w-3" />
                     {l.label}
@@ -86,7 +86,7 @@ export default function Footer() {
                 <li key={l.label}>
                   <Link
                     to={l.to}
-                    className="group text-cream-200/70 hover:text-cream-50 inline-flex items-center gap-1.5 text-sm transition-colors"
+                    className="group text-cream-200/70 hover:text-cream-50 inline-flex min-h-7 items-center gap-1.5 py-1 text-sm transition-colors"
                   >
                     <span className="bg-palm-400 h-px w-0 transition-all duration-300 group-hover:w-3" />
                     {l.label}
@@ -103,7 +103,7 @@ export default function Footer() {
               <li>
                 <a
                   href={site.phone.tel}
-                  className="text-cream-200/70 hover:text-cream-50 flex items-start gap-3 transition-colors"
+                  className="text-cream-200/70 hover:text-cream-50 flex min-h-11 items-start gap-3 py-1.5 transition-colors"
                 >
                   <PhoneIcon className="text-palm-400 mt-0.5 size-4 shrink-0" />
                   <span>
@@ -117,7 +117,7 @@ export default function Footer() {
                   href={telegramLink()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cream-200/70 hover:text-cream-50 flex items-start gap-3 transition-colors"
+                  className="text-cream-200/70 hover:text-cream-50 flex min-h-11 items-start gap-3 py-1.5 transition-colors"
                 >
                   <TelegramIcon className="text-palm-400 mt-0.5 size-4 shrink-0" />
                   <span>
@@ -131,7 +131,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${site.email}`}
-                  className="text-cream-200/70 hover:text-cream-50 flex items-start gap-3 transition-colors"
+                  className="text-cream-200/70 hover:text-cream-50 flex min-h-11 items-start gap-3 py-1.5 transition-colors"
                 >
                   <MailIcon className="text-palm-400 mt-0.5 size-4 shrink-0" />
                   <span className="break-all">{site.email}</span>

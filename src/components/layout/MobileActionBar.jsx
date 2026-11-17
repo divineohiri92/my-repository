@@ -37,7 +37,7 @@ export default function MobileActionBar() {
     >
       <div className="px-3">
         <div className="border-forest-900/8 bg-cream-50/92 flex items-center gap-1 rounded-2xl border p-1.5 shadow-[0_-4px_30px_-10px_rgba(11,26,18,0.35),0_8px_30px_-14px_rgba(11,26,18,0.3)] backdrop-blur-xl">
-          <a href={site.phone.tel} className={`${item} text-forest-950 flex-1`}>
+          <a href={site.phone.tel} className={`${item} text-forest-950 flex-1 basis-0`}>
             <PhoneIcon className="size-4" />
             Call
           </a>
@@ -46,7 +46,7 @@ export default function MobileActionBar() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${item} flex-1.35 bg-[#25D366]/12 text-[#0b6b36]`}
+            className={`${item} grow-[1.35] basis-0 bg-[#25D366]/12 text-[#0b6b36]`}
           >
             <WhatsAppIcon className="size-4" />
             WhatsApp
@@ -56,7 +56,7 @@ export default function MobileActionBar() {
             href={telegramLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${item} flex-1 bg-[#2AABEE]/12 text-[#12628f]`}
+            className={`${item} flex-1 basis-0 bg-[#2AABEE]/12 text-[#12628f]`}
           >
             <TelegramIcon className="size-4" />
             Telegram

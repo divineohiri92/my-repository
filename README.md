@@ -146,6 +146,30 @@ Typical transfer: **~30–70 KB per image** at the size actually displayed.
 
 ---
 
+## Automated audit
+
+A headless-browser check runs against the **production build** (not the dev server),
+because that is what ships:
+
+```bash
+npm run build
+npm run preview          # terminal 1
+npm i -D puppeteer       # audit tooling, not a runtime dependency
+npx puppeteer browsers install chrome
+npm run audit            # terminal 2 — exits non-zero on any failure
+```
+
+It verifies: route status, console errors, failed requests, every internal link,
+`rel="noopener"` on external links, image decode + `alt` presence + no upscaling,
+form validation, mobile menu focus/scroll-lock, sticky bar channels and hit targets,
+anchor scrolling on lazy routes, lightbox keyboard flow, menu tab filtering,
+per-route SEO metadata, static assets, and that content stays visible under
+`prefers-reduced-motion`.
+
+Current state: **50 checks, 0 failures.**
+
+---
+
 ## Deployment
 
 Static output in `dist/`. SPA rewrites are already configured for:

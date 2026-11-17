@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from '../ui/Logo';
-import { PhoneIcon, WhatsAppIcon, TelegramIcon, CloseIcon } from '../ui/icons';
+import { PhoneIcon, WhatsAppIcon, TelegramIcon, CloseIcon, socialIcons } from '../ui/icons';
 import { site, whatsappLink, telegramLink } from '../../data/site';
 
 const nav = [
@@ -327,22 +327,27 @@ export default function Header() {
               </Link>
             </div>
 
-            <div className="text-cream-200/50 mt-6 flex flex-wrap items-center justify-between gap-3 text-[0.6875rem] font-medium tracking-[0.18em] uppercase">
-              <span>
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+              <span className="text-cream-200/50 text-[0.6875rem] font-medium tracking-[0.18em] uppercase">
                 {site.city}, {site.country}
               </span>
-              <div className="flex items-center gap-3">
-                {site.socials.map((s) => (
-                  <a
-                    key={s.name}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-cream-50 transition-colors"
-                  >
-                    {s.name}
-                  </a>
-                ))}
+              {/* Social icons as 44px targets rather than tiny text links */}
+              <div className="flex items-center gap-1">
+                {site.socials.map((s) => {
+                  const Icon = socialIcons[s.name];
+                  return (
+                    <a
+                      key={s.name}
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${site.name} on ${s.name}`}
+                      className="text-cream-200/60 hover:text-cream-50 hover:bg-cream-50/10 grid size-11 place-items-center rounded-full transition-colors"
+                    >
+                      <Icon className="size-4.5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </nav>

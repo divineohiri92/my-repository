@@ -121,10 +121,10 @@ export default function Services() {
                       )}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-forest-950 mt-5 inline-flex items-center gap-1.5 self-start text-[0.75rem] font-semibold"
+                      className="text-forest-950 border-forest-900/15 hover:border-forest-900 hover:bg-forest-900 hover:text-cream-50 mt-4 inline-flex min-h-11 items-center gap-1.5 self-start rounded-full border px-3.5 text-[0.75rem] font-semibold transition-colors"
                     >
-                      <span className="border-palm-500/50 border-b pb-0.5">Enquire about this</span>
-                      <ArrowUpRight className="size-3" />
+                      Enquire about this
+                      <ArrowUpRight className="size-3 opacity-50" />
                     </a>
                   </div>
                 </article>
